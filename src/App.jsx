@@ -31,7 +31,7 @@ function App() {
                     onSubmit={handleSubmit}
                 >
                     <h1 className="title text-2xl md:text-3xl mb-4 font-black text-center italic">
-                        BESHIFY APP🤸
+                        BESHIFY🤸
                     </h1>
 
                     <input
