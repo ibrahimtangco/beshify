@@ -21,16 +21,16 @@ function App() {
 
     const handleCopy = () => {
         navigator.clipboard.writeText(beshifiedText);
-        setIsCopy(true);
+        setIsCopy(!isCopy);
     };
     return (
         <>
-            <div className=" w-full bg-[#2b5e69] h-screen flex justify-center items-center m-auto">
+            <div className="relative w-full bg-[#2b5e69] py-20 h-screen  mx-auto px-8">
                 <form
-                    className="relative bg-[#eaefd7] h-5/6 w-11/12 mx-auto rounded-md p-8 flex flex-col space-y-10 md:max-w-md min-w-max"
+                    className="bg-[#eaefd7] w-full h-full mx-auto rounded-sm flex flex-col items-center space-y-8 p-4 md:p-8 md:max-w-md"
                     onSubmit={handleSubmit}
                 >
-                    <h1 className="title text-3xl mb-4 font-black text-center italic">
+                    <h1 className="title text-2xl md:text-3xl mb-4 font-black text-center italic">
                         BESHIFY APP🤸
                     </h1>
 
@@ -40,7 +40,7 @@ function App() {
                         onChange={(e) => setText(e.target.value)}
                         type="text"
                         placeholder="Enter text to beshify"
-                        className=" w-full p-3 rounded-sm focus:outline-[#ccbcc9]"
+                        className="w-10/12 p-3  rounded-sm focus:outline-[#ccbcc9]"
                     />
                     <button
                         type="submit"
@@ -50,11 +50,11 @@ function App() {
                     </button>
 
                     {isClicked && (
-                        <div className="w-full mx-auto bg-white p-3 rounded-sm">
+                        <div className="w-10/12 mx-auto bg-white p-3 rounded-sm">
                             <p className="flex justify-between items-center ">
                                 {beshifiedText}{" "}
                                 <span
-                                    className="cursor-pointer"
+                                    className="cursor-pointer p"
                                     onClick={handleCopy}
                                 >
                                     {!isCopy ? (
@@ -66,13 +66,13 @@ function App() {
                             </p>
                         </div>
                     )}
-
-                    <div className="absolute bottom-0  flex w-full inset-x-0">
-                        <p className="text-center w-full pb-2 font-medium">
-                            Developed by &copy; Ibrahim Tangco
-                        </p>
-                    </div>
                 </form>
+
+                <div className="absolute bottom-0 left-0 flex w-full">
+                    <p className="text-center w-full pb-2 font-medium">
+                        Developed by &copy; Ibrahim Tangco
+                    </p>
+                </div>
             </div>
         </>
     );
