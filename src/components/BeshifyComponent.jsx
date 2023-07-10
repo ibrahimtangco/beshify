@@ -22,7 +22,7 @@ const BeshifyComponent = () => {
     };
 
     return (
-        <div className="bg-[#e0e6eb] py-8 px-4 rounded-md w-10/12 mx-auto h-5/6 min-w-fit md:h-auto md:max-w-lg ">
+        <div className="bg-[#e0e6eb] py-8 px-4 rounded-md w-10/12 mx-auto md:h-auto md:max-w-lg ">
             <h1 className="mb-8 font-title text-center text-3xl font-black">
                 🤸BESHIFY🤸
             </h1>
