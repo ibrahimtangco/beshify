@@ -4,8 +4,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                body: ["Hind", "sans-serif"],
-                title: ["Montserrat", "sans-serif"],
+                title: ["Shrikhand", "cursive"],
             },
         },
     },
